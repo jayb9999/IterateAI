@@ -1,0 +1,14 @@
+.sidenav {
+    width: 240px;
+    position: absolute;
+    height: 95vh;
+    padding: 0 30px;
+    right: -100%;
+    transition: all 1s;
+    background-color: white;
+    color: black;
+  }
+    
+  .sidenav.active {
+    right: 0;
+  }

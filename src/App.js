@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header'
+import Home from './components/Home'
+import SelectPoojaPackage from './components/SelectPoojaPackage'
+import PoojasList from './components/Poojas'
+import MyPoojaBookings from './components/MyPoojaBookings'
+import PujaPackage from './components/PujaPakages'
+import FillDetails from './components/FillDetails'
+import Payment from './components/Payment'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'
 
-export default App;
+const App = () => (
+  <>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/bookPoojaNow' element={<SelectPoojaPackage />} />
+        <Route exact path='/poojas' element={<PoojasList />} />
+        <Route exact path='/participate' element={<MyPoojaBookings />} />
+        <Route exact path='/selectPackage' element={<PujaPackage />} />
+        <Route exact path='/fillDetails' element={<FillDetails />} />
+        <Route exact path='/payment' element={<Payment />} />
+      </Routes>
+    </BrowserRouter>
+  </>
+)
+
+export default App

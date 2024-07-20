@@ -1,0 +1,22 @@
+/* App.css */
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: beige;
+    background-size: cover;
+}
+
+.logo{
+    display: flex;
+}
+.lgimg{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+h5{
+    margin-top: 0;
+    padding-top: 3px;
+}
